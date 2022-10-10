@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Testleaf</td>
+      <td>04 Oct 2022, 10:58</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.useEnterThePhoneAskForMe()</td>
+              <td>1</td>
+              <td class="duration" data-value="187000000">0.187</td>
+              <td class="duration" data-value="187000000">0.187</td>
+              <td class="duration" data-value="187000000">0.187</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheContactButton1()</td>
+              <td>1</td>
+              <td class="duration" data-value="856000000">0.856</td>
+              <td class="duration" data-value="856000000">0.856</td>
+              <td class="duration" data-value="856000000">0.856</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheCreateContactButton1()</td>
+              <td>1</td>
+              <td class="duration" data-value="779000000">0.779</td>
+              <td class="duration" data-value="779000000">0.779</td>
+              <td class="duration" data-value="779000000">0.779</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheCreateLeadButtonAndItNavigateToTheCreateLeadPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheCrmsfaButtonAndItNaviagteToTheHomePage()</td>
+              <td>2</td>
+              <td class="duration" data-value="1879000000">1.879</td>
+              <td class="duration" data-value="1879000000">2.464</td>
+              <td class="duration" data-value="3758000000">3.758</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheLeadButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="986000000">0.986</td>
+              <td class="duration" data-value="986000000">0.986</td>
+              <td class="duration" data-value="986000000">0.986</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheLoginButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="850000000">0.850</td>
+              <td class="duration" data-value="850000000">0.850</td>
+              <td class="duration" data-value="850000000">0.850</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheSubmitButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userClickOnTheSubmitButtonAndUserSuccessfullyCreatedUserLead()</td>
+              <td>1</td>
+              <td class="duration" data-value="6421000000">6.421</td>
+              <td class="duration" data-value="6421000000">6.421</td>
+              <td class="duration" data-value="6421000000">6.421</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAcode()</td>
+              <td>1</td>
+              <td class="duration" data-value="87000000">0.087</td>
+              <td class="duration" data-value="87000000">0.087</td>
+              <td class="duration" data-value="87000000">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAdd1()</td>
+              <td>1</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAdd2()</td>
+              <td>1</td>
+              <td class="duration" data-value="92000000">0.092</td>
+              <td class="duration" data-value="92000000">0.092</td>
+              <td class="duration" data-value="92000000">0.092</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAddress1()</td>
+              <td>1</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAddress2()</td>
+              <td>1</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAnnualRevenue()</td>
+              <td>1</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAreaCode()</td>
+              <td>1</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAttentionName()</td>
+              <td>1</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheAttnname()</td>
+              <td>1</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCampaignId()</td>
+              <td>1</td>
+              <td class="duration" data-value="139000000">0.139</td>
+              <td class="duration" data-value="139000000">0.139</td>
+              <td class="duration" data-value="139000000">0.139</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCity()</td>
+              <td>1</td>
+              <td class="duration" data-value="114000000">0.114</td>
+              <td class="duration" data-value="114000000">0.114</td>
+              <td class="duration" data-value="114000000">0.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCodeextension()</td>
+              <td>1</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCompanyName()</td>
+              <td>1</td>
+              <td class="duration" data-value="191000000">0.191</td>
+              <td class="duration" data-value="191000000">0.191</td>
+              <td class="duration" data-value="191000000">0.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCountry()</td>
+              <td>1</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCountryCode1()</td>
+              <td>1</td>
+              <td class="duration" data-value="172000000">0.172</td>
+              <td class="duration" data-value="172000000">0.172</td>
+              <td class="duration" data-value="172000000">0.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCountrycode()</td>
+              <td>1</td>
+              <td class="duration" data-value="95000000">0.095</td>
+              <td class="duration" data-value="95000000">0.095</td>
+              <td class="duration" data-value="95000000">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCountryid()</td>
+              <td>1</td>
+              <td class="duration" data-value="90000000">0.090</td>
+              <td class="duration" data-value="90000000">0.090</td>
+              <td class="duration" data-value="90000000">0.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCreatedesc()</td>
+              <td>1</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheCurrencyId()</td>
+              <td>1</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheDepartmentName()</td>
+              <td>1</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheDepartmentName1()</td>
+              <td>1</td>
+              <td class="duration" data-value="106000000">0.106</td>
+              <td class="duration" data-value="106000000">0.106</td>
+              <td class="duration" data-value="106000000">0.106</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheDescription()</td>
+              <td>1</td>
+              <td class="duration" data-value="131000000">0.131</td>
+              <td class="duration" data-value="131000000">0.131</td>
+              <td class="duration" data-value="131000000">0.131</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="152000000">0.152</td>
+              <td class="duration" data-value="152000000">0.152</td>
+              <td class="duration" data-value="152000000">0.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheExtension()</td>
+              <td>1</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheFirstname()</td>
+              <td>1</td>
+              <td class="duration" data-value="178000000">0.178</td>
+              <td class="duration" data-value="178000000">0.178</td>
+              <td class="duration" data-value="178000000">0.178</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheFirstname1()</td>
+              <td>1</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheFirstnameLocal()</td>
+              <td>1</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="duration" data-value="151000000">0.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheGeneralcity()</td>
+              <td>1</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheImportantNoteAndItNavigateToTheContactInformationPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheImportantNoteAndItNavigateToTheContactSession()</td>
+              <td>1</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheIndustry()</td>
+              <td>1</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheLastname()</td>
+              <td>1</td>
+              <td class="duration" data-value="122000000">0.122</td>
+              <td class="duration" data-value="122000000">0.122</td>
+              <td class="duration" data-value="122000000">0.122</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheLastname1()</td>
+              <td>1</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="duration" data-value="164000000">0.164</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheLastnameLocal()</td>
+              <td>1</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheNumberOfEmployees()</td>
+              <td>1</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePaskforme()</td>
+              <td>1</td>
+              <td class="duration" data-value="108000000">0.108</td>
+              <td class="duration" data-value="108000000">0.108</td>
+              <td class="duration" data-value="108000000">0.108</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePcode()</td>
+              <td>1</td>
+              <td class="duration" data-value="94000000">0.094</td>
+              <td class="duration" data-value="94000000">0.094</td>
+              <td class="duration" data-value="94000000">0.094</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePemailAndItNavigateToTheThePrimarySession()</td>
+              <td>1</td>
+              <td class="duration" data-value="124000000">0.124</td>
+              <td class="duration" data-value="124000000">0.124</td>
+              <td class="duration" data-value="124000000">0.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePextension()</td>
+              <td>1</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePhoneNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="129000000">0.129</td>
+              <td class="duration" data-value="129000000">0.129</td>
+              <td class="duration" data-value="129000000">0.129</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePnumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="duration" data-value="113000000">0.113</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePostalCode()</td>
+              <td>1</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterThePreferredCurrency()</td>
+              <td>1</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheSalutation()</td>
+              <td>1</td>
+              <td class="duration" data-value="119000000">0.119</td>
+              <td class="duration" data-value="119000000">0.119</td>
+              <td class="duration" data-value="119000000">0.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheSalutationField()</td>
+              <td>1</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheSiccode()</td>
+              <td>1</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="duration" data-value="105000000">0.105</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheSourceid()</td>
+              <td>1</td>
+              <td class="duration" data-value="134000000">0.134</td>
+              <td class="duration" data-value="134000000">0.134</td>
+              <td class="duration" data-value="134000000">0.134</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheState()</td>
+              <td>1</td>
+              <td class="duration" data-value="117000000">0.117</td>
+              <td class="duration" data-value="117000000">0.117</td>
+              <td class="duration" data-value="117000000">0.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheStateid()</td>
+              <td>1</td>
+              <td class="duration" data-value="80000000">0.080</td>
+              <td class="duration" data-value="80000000">0.080</td>
+              <td class="duration" data-value="80000000">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheTitle()</td>
+              <td>1</td>
+              <td class="duration" data-value="169000000">0.169</td>
+              <td class="duration" data-value="169000000">0.169</td>
+              <td class="duration" data-value="169000000">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheTitleField()</td>
+              <td>1</td>
+              <td class="duration" data-value="112000000">0.112</td>
+              <td class="duration" data-value="112000000">0.112</td>
+              <td class="duration" data-value="112000000">0.112</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheToname()</td>
+              <td>1</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="duration" data-value="99000000">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheToname1()</td>
+              <td>1</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="duration" data-value="100000000">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheUsername()</td>
+              <td>1</td>
+              <td class="duration" data-value="1063000000">1.063</td>
+              <td class="duration" data-value="1063000000">1.063</td>
+              <td class="duration" data-value="1063000000">1.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheWeburlAndItNavigateToThePrimaryAddressPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="136000000">0.136</td>
+              <td class="duration" data-value="136000000">0.136</td>
+              <td class="duration" data-value="136000000">0.136</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userEnterTheZipPostalCode()</td>
+              <td>1</td>
+              <td class="duration" data-value="97000000">0.097</td>
+              <td class="duration" data-value="97000000">0.097</td>
+              <td class="duration" data-value="97000000">0.097</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.StepDefinition.Leadstep.userLaunchTheApplication()</td>
+              <td>3</td>
+              <td class="duration" data-value="559666666">0.559</td>
+              <td class="duration" data-value="559666666">1.088</td>
+              <td class="duration" data-value="1679000000">1.679</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>67</td>
+            <td>70</td>
+            <td class="duration">0.441</td>
+            <td class="duration">6.441</td>
+            <td class="duration">30.884</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

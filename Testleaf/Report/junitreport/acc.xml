@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="9.609">
+<testcase classname="To validate Account page for testleaf application" name="To validate login functionality" time="2.623">
+<system-out><![CDATA[Given User launch the testleaf application..................................passed
+When User enter the value to username "demosalesmanager" textfield..........passed
+And User enter the value password "crmsfa" textfield........................passed
+Then user click on the login button.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate Account page for testleaf application" name="To validate account functionality" time="4.784">
+<system-out><![CDATA[When user click on the crmsfa button and it navigate to the home page.......passed
+And user click on the account button and it navigate to the account page....passed
+Then user click on the create account button and it navigate to the create account page.passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate Account page for testleaf application" name="To  validate create account page" time="1.856">
+<system-out><![CDATA[When user enter the value to accname "Sowmiya" textfield....................passed
+And user enter the value to accdesc "check all fields fill or not" textfield.passed
+And user enter the value to areacode "09" textfield.........................passed
+And user enter the value to email "saso@gmail.com" textfield................passed
+And user enter the value to toname "kavin" textfield........................passed
+And user enter the value to state "AA" textfield............................passed
+And user enter the value to countryid "ARG" textfield.......................passed
+Then user click on the submit button and user account successfully created..passed
+]]></system-out>
+</testcase>
+</testsuite>
