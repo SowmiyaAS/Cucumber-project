@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="2.782">
+    <testcase classname="Online Shopping" name="Dress purchases" time="1.45">
+        <system-out><![CDATA[Given user launch the application for dress purchases.......................passed
+When user enter the username in the vaild feild.............................passed
+And user enter the password in the  vaild feild.............................passed
+Then user click the login button and its Navigate to product page...........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Online Shopping" name="Products select" time="0.985">
+        <system-out><![CDATA[Given user select the product...............................................passed
+When user select the Add to cart button in  Sauce Labs Backpack product.....passed
+And user select the Add to cart button in Sauce Labs Bike Light product.....passed
+And user select the Add to cart button in Sauce Labs Bolt T-Shirt product...passed
+And user click the Shopping cart button and its Navigate to the Your cart page.passed
+And user click the checkout button and its Navigate to the Your Information page.passed
+And user enters the First name in the vaild field...........................passed
+And user enters the last name in the vaild field............................passed
+And user enters the zipcode in the vaild field..............................passed
+And user click the coutinue button..........................................passed
+Then user click the finish button...........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
